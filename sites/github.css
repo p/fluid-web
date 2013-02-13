@@ -1,0 +1,23 @@
+/**
+host: github.com
+*/
+
+/* fluid width */
+html,body{min-width:auto;}
+.container{width:auto;}
+
+/* fixes to columns */
+body.page-profile .profilecols .first,.columns.browser .sidebar{width:20%;}
+body.page-profile .profilecols .last,.columns.browser .main{width:80%;}
+.discussion-sidebar{width:15%;}
+.discussion-timeline{width:85%;}
+
+/* forget what this is for */
+.columns.browser .sidebar{padding-right:0;}
+
+/* moving elements back into viewport */
+#files .add-bubble{margin-left:0;}
+
+/* todo:
+- edit link for repo descriptions is off screen
+*/

@@ -8,7 +8,8 @@ html,body{min-width:auto;}
 
 /* fixes to columns */
 body.page-profile .profilecols .first,.columns.browser .sidebar{width:20%;}
-body.page-profile .profilecols .last,.columns.browser .main{width:80%;}
+/* at even smaller widths something does not fit into 80%, borders maybe? */
+body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 .discussion-sidebar{width:15%;}
 .discussion-timeline{width:85%;}
 

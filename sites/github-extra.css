@@ -8,3 +8,8 @@ host: github.com
 {height:34px;line-height:34px;}
 .header-logo-blacktocat{padding-bottom:3px;padding-top:4px;}
 #user-links a{padding-bottom:0;}
+
+pre, code, tt {
+	/* wrap diffs, this also fits inline comments in diffs to viewport width */
+	white-space: normal;
+}

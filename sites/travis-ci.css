@@ -1,0 +1,11 @@
+/**
+host: travis-ci.org
+*/
+
+/* delete left sidebar */
+/* the only useful item there is the search box,
+XXX relocate it */
+#left {display: none;}
+
+/* hide follow logs link due to it fidgeting */
+#log a {display:none;}

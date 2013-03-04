@@ -10,11 +10,14 @@ function addstyle(css) {
   document.getElementsByTagName('head')[0].appendChild(style);
 }
 var styles = {};
+var matched = false;
 '''
 
 hostmap = {}
 
 for file in os.listdir('sites'):
+    if not file.endswith('css'):
+        continue
     with open(os.path.join('sites', file)) as f:
         content = f.read()
     match = re.compile('^host: (.*)', re.M).search(content)
@@ -34,7 +37,22 @@ for host in hostmap:
         styles['%(host)s'] = "%(content)s";
         if (/\/\/%(host)s/.test(window.location.href)) {
             addstyle(styles['%(host)s']);
+            matched = true;
         }
     ''' % dict(host=host, content=content)
+
+if 'default' in hostmap:
+    content = ''.join(hostmap['default'])
+    preamble += '''
+        styles['default'] = "%(content)s";
+        if (!matched) {
+            addstyle(styles['default']);
+        }
+    ''' % dict(host=host, content=content)
+
+preamble += '''
+    window.FluidWeb = window.FluidWeb || {};
+    window.FluidWeb.matched = matched;
+'''
 
 print preamble

@@ -26,6 +26,16 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 	width:auto;
 }
 
+/* popular/contributed repos */
+.popular-repos .capped-box {
+	width: auto;
+}
+
+/* and reduce padding */
+.grid .col:first-child, .grid .col:last-child {
+	padding: 0;
+}
+
 /* todo:
 - edit link for repo descriptions is off screen
 */

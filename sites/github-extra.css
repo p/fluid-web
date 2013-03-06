@@ -11,5 +11,11 @@ host: github.com
 
 pre, code, tt {
 	/* wrap diffs, this also fits inline comments in diffs to viewport width */
-	white-space: normal;
+	/* XXX research pre-line vs pre-wrap */
+	white-space: pre-line;
+}
+
+/* fit contribution graph into screen better at smaller widths */
+svg {
+	margin-left: -20px;
 }

@@ -19,6 +19,13 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 /* moving elements back into viewport */
 #files .add-bubble{margin-left:0;}
 
+/* source view/readme file in repo index */
+#slider .frames { width:auto; }
+#slider .frames .frame {
+	margin-right:0;
+	width:auto;
+}
+
 /* todo:
 - edit link for repo descriptions is off screen
 */

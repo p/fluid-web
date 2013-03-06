@@ -1,0 +1,10 @@
+/**
+host: default
+*/
+
+/* Styles that are applied if no site-specific styles exist */
+
+pre, code, tt {
+	/* undoes white-space: pre */
+	white-space: pre-line;
+}

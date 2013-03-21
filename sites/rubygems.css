@@ -1,0 +1,13 @@
+/**
+host: rubygems.org
+*/
+
+/* make fluid width */
+.container_12, .container_12 .grid_10 {
+	width: auto;
+}
+
+/* and the space is wasted on padding */
+.container_12 .prefix_1, .container_12 .suffix_1 {
+	padding: 0;
+}

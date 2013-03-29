@@ -1,0 +1,9 @@
+/**
+host: www.pivotaltracker.com
+*/
+
+/* delete labels over input elements */
+
+#sign_in label {
+	display: none;
+}

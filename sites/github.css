@@ -18,12 +18,26 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 
 /* moving elements back into viewport */
 #files .add-bubble{margin-left:0;}
+#files .add-line-comment {
+	margin-left: 0;
+}
+/* body { margin-left: 50px } */
 
 /* source view/readme file in repo index */
-#slider .frames { width:auto; }
+#slider {
+	overflow: visible;
+	width: 100%;
+}
+#slider .frames {
+	width: 100%;
+}
 #slider .frames .frame {
 	margin-right:0;
-	width:auto;
+	width: 100%;
+}
+
+.tree-browser td {
+	white-space: normal;
 }
 
 /* popular/contributed repos */
@@ -34,6 +48,10 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 /* and reduce padding */
 .grid .col:first-child, .grid .col:last-child {
 	padding: 0;
+}
+
+#readme .markdown-body, #readme .plain {
+	padding: 5px;
 }
 
 /* todo:

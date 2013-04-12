@@ -6,5 +6,5 @@ host: default
 
 pre, code, tt {
 	/* undoes white-space: pre */
-	white-space: pre-line;
+	white-space: pre-wrap;
 }

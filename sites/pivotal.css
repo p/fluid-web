@@ -1,0 +1,13 @@
+/**
+host: www.pivotaltracker.com
+*/
+
+/* fluid width */
+
+body {
+	min-width: auto;
+}
+
+#main > .content, #footer #footer_content {
+	width: auto;
+}

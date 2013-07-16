@@ -54,24 +54,32 @@ for file in os.listdir('sites'):
     if file.endswith('.js'):
         process_js(file)
 
+def host_spec_to_regexp(host):
+    host = host.replace('.', '\\.')
+    host = host.replace('*', '.*')
+    host = '\\/\\/' + host
+    return host
+
 for host in css_hostmap:
     content = ''.join(css_hostmap[host])
+    re_host = host_spec_to_regexp(host)
     preamble += '''
         styles['%(host)s'] = "%(content)s";
-        if (/\/\/%(host)s/.test(window.location.href)) {
+        if (/%(re_host)s/.test(window.location.href)) {
             addstyle(styles['%(host)s']);
             matched = true;
         }
-    ''' % dict(host=host, content=content)
+    ''' % dict(host=host, re_host=re_host, content=content)
 
 for host in js_hostmap:
     content = ''.join(js_hostmap[host])
+    re_host = host_spec_to_regexp(host)
     preamble += '''
-        if (/\/\/%(host)s/.test(window.location.href)) {
+        if (/%(re_host)s/.test(window.location.href)) {
             %(content)s
             ;matched = true;
         }
-    ''' % dict(host=host, content=content)
+    ''' % dict(host=host, re_host=re_host, content=content)
 
 if 'default' in css_hostmap:
     content = ''.join(css_hostmap['default'])
@@ -80,7 +88,7 @@ if 'default' in css_hostmap:
         if (!matched) {
             addstyle(styles['default']);
         }
-    ''' % dict(host=host, content=content)
+    ''' % dict(content=content)
 
 preamble += '''
     window.FluidWeb = window.FluidWeb || {};

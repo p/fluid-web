@@ -37,7 +37,6 @@ def process_js(file):
     
     with open(os.path.join('sites', file)) as f:
         content = f.read()
-    content = re.compile('//.*$', re.M).sub('', content)
     match = re.compile('^host: (.*)', re.M).search(content)
     assert match
     host = match.group(1)

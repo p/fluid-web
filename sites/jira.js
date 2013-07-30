@@ -2,7 +2,7 @@
 host: *.atlassian.net
 */
 
-window.bsdpower.ready.push(function() {
+window.bsdpower.ready(function() {
           var doit = function () {
             //alert(document.getElementById('stalker').style.position);
           //document.getElementById('stalker').id = 'no-stalker';
@@ -17,7 +17,7 @@ window.bsdpower.ready.push(function() {
             parent.insertBefore(rep, parent.childNodes[0]);
             parent.removeChild(node);
           };
-          window.bsdpower.ready.push(doit);
+          window.bsdpower.ready(doit);
           var old = history.pushState;
           history.pushState = function() {
             //alert('here');

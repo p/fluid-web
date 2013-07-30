@@ -1,0 +1,9 @@
+/**
+host: dashboard.heroku.com
+*/
+
+/* show full email addresses of collaborators */
+.user-list .name {
+	text-overflow: inherit !important;
+	overflow: visible !important;
+}

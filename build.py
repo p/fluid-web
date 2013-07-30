@@ -72,6 +72,9 @@ for host in css_hostmap:
         }
     ''' % dict(host=host, re_host=re_host, content=content)
 
+with open('lib/ready.js') as f:
+    preamble += f.read()
+
 for host in js_hostmap:
     content = ''.join(js_hostmap[host])
     re_host = host_spec_to_regexp(host)

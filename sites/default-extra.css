@@ -8,3 +8,31 @@ pre, code, tt {
 	/* undoes white-space: pre */
 	white-space: pre-wrap;
 }
+
+/* activeadmin */
+
+.active_admin * {
+	text-shadow: none !important;
+}
+
+.active_admin #header a {
+	color: white;
+	background-color: #444;
+}
+
+.active_admin #header #tabs {
+	height: 48px !important;
+}
+
+.active_admin #tabs li {
+	height: 24px;
+	/* padding: 0; */
+	border-radius: none;
+}
+
+.active_admin #tabs li a {
+	/* padding: 0 !important; */
+	border-radius: 0 !important;
+	display: block;
+	height: 100%;
+}

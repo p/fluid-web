@@ -1,0 +1,60 @@
+/**
+host: *.atlassian.net
+*/
+
+/* nukes fading to background color just below the fixed header */
+.ops-cont {
+	overflow: auto;
+}
+
+/* unfixes the header */
+.issue-header {
+	/* has inline position: fixed */
+	position: auto !important;
+}
+
+/* hides keyboard shortcuts message */
+.aui-message { display:none; }
+
+/* more popups */
+/* has inline display: block
+#inline-dialog-split-view-intro {
+	display: none;
+}
+*/
+.intro-dialog-content {
+	display: none;
+}
+
+/* this was meant to nuke useless margins on header when page is scrolled,
+but it appears to prevent that behavior entirely */
+header, content > .aui-page-header {padding:0;}
+
+/* edit etc. links for comments */
+.actionContainer .action-links {
+	visibility: visible;
+}
+
+/* user popup in issue list */
+#user-hover-email {
+	display: none !important;
+}
+
+/* nuke css transitions, should be global */
+*{transition:none !important;}
+
+/* always show edit icon for issue descriptions */
+.overlay-icon{z-index: 0 !important; opacity: 1 !important;}
+
+/* always hide border around issue descriptions */
+.editable-field {box-shadow: none !important;}
+
+/* disable background color change when hovering over comments */
+.issue-data-block:hover {
+	background-color: inherit !important;
+}
+
+/* disable background color change when hovering over ticket title */
+.editable-field:hover {
+	background-color: inherit !important;
+}

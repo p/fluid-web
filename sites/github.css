@@ -55,6 +55,12 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 	padding: 5px;
 }
 
+/* make x bigger */
+.status-failure {
+	background-color: pink !important;
+	width: 100px !important;
+}
+
 /* todo:
 - edit link for repo descriptions is off screen
 */

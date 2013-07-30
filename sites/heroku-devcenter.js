@@ -2,8 +2,9 @@
 host: devcenter.heroku.com
 */
 
-alert(1);
+window.bsdpower.ready.push(function() {
 jQuery(function($) {
 alert(2);
   $(document.body).focus();
+});
 });

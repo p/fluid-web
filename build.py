@@ -42,7 +42,7 @@ def process_js(file):
     assert match
     host = match.group(1)
     
-    content = re.compile(r'//.*$', re.M).sub('', content)
+    content = re.compile(r'^\s*//.*$', re.M).sub('', content)
     content = re.compile(r'/\*.*?\*/', re.S).sub('', content)
     content = content.replace("\n", ' ').replace('"', r'\"')
     

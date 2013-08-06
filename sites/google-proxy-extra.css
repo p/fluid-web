@@ -1,0 +1,14 @@
+/**
+host: gs
+*/
+
+/* top navbar */
+#gb {
+	display: none;
+}
+
+/* space above search results */
+#center_col {
+	margin-top: 0 !important;
+}
+

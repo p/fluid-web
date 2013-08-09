@@ -33,3 +33,12 @@ svg {
 */
 
 .repo-nav-contents {display:none;}
+
+/* repo navigation */
+.overall-summary .numbers-summary li a {
+	color: #444;
+}
+
+.overall-summary .numbers-summary li .num .octicon {
+	display: none;
+}

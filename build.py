@@ -21,33 +21,37 @@ def process_css(file):
     
     with open(os.path.join('sites', file)) as f:
         content = f.read()
-    match = re.compile('^host: (.*)', re.M).search(content)
-    assert match
-    host = match.group(1)
+    
+    matches = re.compile('^host: (.*)', re.M).finditer(content)
     
     content = re.compile(r'/\*.*?\*/', re.S).sub('', content)
     content = content.replace("\n", ' ').replace('"', r'\"')
     
-    bits = css_hostmap.get(host, [])
-    bits.append(content)
-    css_hostmap[host] = bits
+    for match in matches:
+        host = match.group(1)
+        
+        bits = css_hostmap.get(host, [])
+        bits.append(content)
+        css_hostmap[host] = bits
 
 def process_js(file):
     global js_hostmap
     
     with open(os.path.join('sites', file)) as f:
         content = f.read()
-    match = re.compile('^host: (.*)', re.M).search(content)
-    assert match
-    host = match.group(1)
+    
+    matches = re.compile('^host: (.*)', re.M).finditer(content)
     
     content = re.compile(r'^\s*//.*$', re.M).sub('', content)
     content = re.compile(r'/\*.*?\*/', re.S).sub('', content)
     content = content.replace("\n", ' ').replace('"', r'\"')
     
-    bits = js_hostmap.get(host, [])
-    bits.append(content)
-    js_hostmap[host] = bits
+    for match in matches:
+        host = match.group(1)
+        
+        bits = js_hostmap.get(host, [])
+        bits.append(content)
+        js_hostmap[host] = bits
 
 for file in os.listdir('sites'):
     if file.endswith('.css'):

@@ -36,3 +36,9 @@ pre, code, tt {
 	display: block;
 	height: 100%;
 }
+
+/* force borders on input elements */
+
+input {
+	border: 1px solid currentColor !important;
+}

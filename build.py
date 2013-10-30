@@ -79,6 +79,13 @@ for host in css_hostmap:
         }
     ''' % dict(host=host, re_host=re_host, content=content)
 
+if 'all' in css_hostmap:
+    content = ''.join(css_hostmap['all'])
+    preamble += '''
+        styles['all'] = "%(content)s";
+        addstyle(styles['all']);
+    ''' % dict(content=content)
+
 for host in js_hostmap:
     content = ''.join(js_hostmap[host])
     re_host = host_spec_to_regexp(host)

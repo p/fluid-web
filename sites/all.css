@@ -1,0 +1,17 @@
+/**
+host: all
+*/
+
+/* disable css transitions */
+* {
+  -webkit-transition: none !important;
+  -moz-transition: none !important;
+  -o-transition: none !important;
+  -ms-transition: none !important;
+  transition: none !important;
+}
+
+/* disable custom fonts */
+* {
+	font-family: sans-serif !important;
+}

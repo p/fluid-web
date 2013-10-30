@@ -4,4 +4,5 @@ host: bitbucket.org
 
 /* fluid width */
 #page{min-width:auto;}
-#content,.center-content,.aui-header-inner{width:auto;}
+#content,.center-content,.aui-header-inner,
+.admin-layout .main > section {width:auto !important;}

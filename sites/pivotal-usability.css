@@ -3,7 +3,22 @@ host: www.pivotaltracker.com
 */
 
 /* delete labels over input elements */
-
 #sign_in label {
+	display: none;
+}
+
+/* don't know what this is */
+.expiration-callout {
+	display: none;
+}
+
+/* nuke floating, take full width */
+#person_controls {
+	float: none;
+	margin: 0;
+}
+
+/* and nuke pivotal tracker banner */
+h1 {
 	display: none;
 }

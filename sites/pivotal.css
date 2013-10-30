@@ -4,8 +4,8 @@ host: www.pivotaltracker.com
 
 /* fluid width */
 
-body {
-	min-width: auto;
+body, .layouts.show header.project {
+	min-width: auto !important;
 }
 
 #main > .content, #footer #footer_content {

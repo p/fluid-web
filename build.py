@@ -65,6 +65,9 @@ def host_spec_to_regexp(host):
     host = '\\/\\/' + host
     return host
 
+with open('lib/ready.js') as f:
+    preamble += f.read()
+
 for host in css_hostmap:
     content = ''.join(css_hostmap[host])
     re_host = host_spec_to_regexp(host)
@@ -75,9 +78,6 @@ for host in css_hostmap:
             matched = true;
         }
     ''' % dict(host=host, re_host=re_host, content=content)
-
-with open('lib/ready.js') as f:
-    preamble += f.read()
 
 for host in js_hostmap:
     content = ''.join(js_hostmap[host])

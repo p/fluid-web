@@ -22,10 +22,7 @@ window.bsdpower.ready(function() {
     e.attr('original-title', '');
   });
   
-  $('*[data-pjax=true]').each(function() {
-    var e = $(this);
-    e.attr('data-pjax', '');
-  });
+  $('*[data-pjax]').removeAttr('data-pjax');
   
   /* un-js links */
   

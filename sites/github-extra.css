@@ -42,3 +42,6 @@ svg {
 .overall-summary .numbers-summary li .num .octicon {
 	display: none;
 }
+
+/* email address warning */
+.flash-warn { display: none; }

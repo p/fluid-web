@@ -11,3 +11,34 @@ table#mn th[width="278"]  {
 table#mn th[width="573"]  {
 	width: 100% !important;
 }
+
+/* cached link */
+.am-dwn-arw-container > div:first-child {
+	display: none !important;
+}
+
+.am-dropdown-menu {
+    display: block !important;
+	/* nuke positioning and border */
+	position: auto;
+	border: none;
+	/* move onto previous line */
+	margin-top: -16px;
+}
+
+/* irrelevant
+.am-dropdown-menu ul li {
+	float: left;
+}
+*/
+
+/* similar link */
+.am-dropdown-menu ul li:nth-child(2) {
+	display: none;
+}
+
+/* nuke vertical padding, fit into previous line height-wise */
+a.am-dropdown-menu-item-text {
+	/* for some reason equal left and right padding does not render equally */
+	padding: 0 12px 0 10px;
+}

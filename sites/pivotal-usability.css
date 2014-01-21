@@ -22,3 +22,8 @@ host: www.pivotaltracker.com
 h1 {
 	display: none;
 }
+
+/* scheduled downtime */
+section.status {
+	display: none;
+}

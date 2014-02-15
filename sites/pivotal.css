@@ -11,3 +11,7 @@ body, .layouts.show header.project {
 #main > .content, #footer #footer_content {
 	width: auto;
 }
+
+section.maximized .panel {
+	min-width: auto !important;
+}

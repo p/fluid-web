@@ -61,6 +61,15 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 	width: 100px !important;
 }
 
+/* repo list, all columns on profile page? */
+.column-main {
+	width: auto;
+}
+
+svg {
+	margin-left: 0;
+}
+
 /* todo:
 - edit link for repo descriptions is off screen
 */

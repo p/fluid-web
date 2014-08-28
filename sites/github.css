@@ -4,7 +4,8 @@ host: github.com
 
 /* fluid width */
 html,body{min-width:auto;}
-.container{width:auto;}
+.container, .repository-with-sidebar .repository-content {width:auto;}
+.header {min-width:auto;}
 
 /* fixes to columns */
 body.page-profile .profilecols .first,.columns.browser .sidebar{width:20%;}

@@ -13,13 +13,23 @@ host: github.com
 
 #user-links a{padding-bottom:0;}
 
-pre, code, tt {
+pre, code, tt, .diff-line-code {
 	/* wrap diffs, this also fits inline comments in diffs to viewport width */
 	/* XXX research pre-line vs pre-wrap */
-	white-space: pre-wrap;
+	white-space: normal;
 }
 
 /* fit contribution graph into screen better at smaller widths */
 svg {
 	margin-left: -20px;
 }
+
+.site-footer {display:none;}
+
+/*
+(c)ommits
+(i)issues
+(p)ull requests
+*/
+
+.repo-nav-contents {display:none;}

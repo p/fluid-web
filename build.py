@@ -29,6 +29,8 @@ def process_css(file):
     
     for match in matches:
         host = match.group(1)
+        #host_re = host.replace('.', '\\.')
+        #host_re = host_re.replace('*', '.*')
         
         bits = css_hostmap.get(host, [])
         bits.append(content)

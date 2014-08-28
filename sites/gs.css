@@ -1,0 +1,13 @@
+/**
+host: gs
+*/
+
+/* seemingly invisible right column, is this where ads go? */
+table#mn th[width="278"]  {
+	display: none;
+}
+
+/* make content column wider */
+table#mn th[width="573"]  {
+	width: 100% !important;
+}

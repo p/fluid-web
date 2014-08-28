@@ -1,0 +1,18 @@
+/**
+host: msdn.microsoft.com
+*/
+
+body.library div#body {
+    padding: 0;
+}
+
+/*
+#leftNav {
+    width: auto !important;
+    max-width: 250px !important;
+}
+*/
+
+body.library #page {
+    min-width: auto;
+}

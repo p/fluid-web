@@ -24,6 +24,9 @@ window.bsdpower.ready(function() {
   
   $('*[data-pjax]').removeAttr('data-pjax');
   
+  /* fix readme being too wide */
+  
+  
   /* un-js links */
   
   $('a.js-repo-home-link').each(function() {

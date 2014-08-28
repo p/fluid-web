@@ -1,0 +1,45 @@
+/**
+host: stackoverflow.com
+host: *.stackexchange.com
+*/
+
+/* nuke ads */
+#careers1, #careers3
+/* nuke junk */
+, #herobox-mini
+{
+    display: none;
+}
+
+.topbar .topbar-wrapper {
+	width: auto !important;
+}
+
+/* some sliding crap */
+body {
+	margin-top: 0 !important;
+}
+
+/* make header smaller */
+#header {
+    height: auto !important;
+}
+
+#hlogo {
+    display: none;
+}
+
+#header #hmenus {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+/* nuke obnoxious answer highlight */
+.answer {
+	background: white !important;
+}
+
+/* password prompt, other things? */
+#notify-container {
+	display: none !important;
+}

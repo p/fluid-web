@@ -45,3 +45,6 @@ svg {
 
 /* email address warning */
 .flash-warn { display: none; }
+
+/* repository navigation */
+.repository-sidebar {display:none;}

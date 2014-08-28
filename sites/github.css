@@ -4,7 +4,11 @@ host: github.com
 
 /* fluid width */
 html,body{min-width:auto;}
-.container, .repository-with-sidebar .repository-content {width:auto;}
+.container, .repository-with-sidebar .repository-content,
+.logged_out.signup .header-logged-out.container, .logged_out.signup .site-footer,
+.repository-with-sidebar .repository-content,
+.repository-with-sidebar.with-full-navigation .repository-content
+{width:auto;}
 .header {min-width:auto;}
 
 /* fixes to columns */
@@ -68,6 +72,10 @@ body.page-profile .profilecols .last,.columns.browser .main{width:79%;}
 
 svg {
 	margin-left: 0;
+}
+
+.markdown-body img {
+	overflow: hidden;
 }
 
 /* todo:
